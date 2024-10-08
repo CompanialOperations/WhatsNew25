@@ -389,10 +389,7 @@ report 55055 "Demo Contact - Cover Sheet"
 
     local procedure Marks2OnAfterValidate()
     begin
-        if Marks[2] then
-            MarksTxt[2] := MarkTxt
-        else
-            MarksTxt[2] := ''
+        MarksTxt[2] := Marks[2] ? MarkTxt : '';
     end;
 
     local procedure Marks3OnAfterValidate()
