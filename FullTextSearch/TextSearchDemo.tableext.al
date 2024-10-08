@@ -12,6 +12,6 @@ tableextension 50100 "Text Search Demo" extends Item
 
     procedure FindText(SearchText: Text[100])
     begin
-        SetFilter("Text Content", '&&%1*', SearchText);
+        SetFilter("Text Content", '&&' + SearchText + '*');
     end;
 }
